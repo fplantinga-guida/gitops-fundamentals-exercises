@@ -17,7 +17,7 @@ flux create source git flux-fundamentals \
 
 2. Your source should now be added. Verify that the git source is added correctly by running:
 ```
-flux get source git fundamentals -n <NAMESPACE>
+flux get source git fundamentals -n $NAMESPACE
 ```
 3. Export this Git Source as a yaml file.
 ```
