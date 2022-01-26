@@ -24,16 +24,16 @@ flux create kustomization development --service-account=flux-reconciler \
 --source=flux-fundamentals \
 --path="./exercises/helm-controller/development" \
 --prune=true \
---interval=10m \
--n <NAMESPACE>
+--interval=10m 
 ```
 5. Export this Kustomization as a yaml file.
 ```
 flux export kustomization development -n <NAMESPACE> > cluster/flux-development-kustomization.yaml
 ```
+
 6. Validate that your HelmRelease is deployed
 ```
-flux get helmreleases -n <NAMESPACE>
+flux get helmreleases
 ```
 ```
 kubectl get pods -n <NAMESPACE>
